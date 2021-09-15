@@ -21,7 +21,7 @@ app.config_from_object('django.conf:settings', namespace='CELERY')
 # Load task modules from all registered Django apps.
 # Celery Beat Settings
 app.conf.beat_schedule = {
-    'send-mail-every-day-at-8': {
+    'send-mail-every-60sec': {
         'task': 'app1.tasks.send_mail_with_celery',
         'schedule':60
         #'schedule': crontab(hour=0, minute=46, day_of_month=19, month_of_year = 6),
